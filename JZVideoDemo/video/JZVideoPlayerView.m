@@ -231,7 +231,7 @@
         [self initPortraint];
     }
 }
-
+//initLandscape与initPortraint里面一样
 -(void)initLandscape{
     NSLog(@"====%f",self.playerLayer.frame.size.width);
     float frameWidth = self.frame.size.width;
@@ -242,7 +242,7 @@
     self.progressBar.frame = CGRectMake(30, 11, frameWidth-60, 14);
     self.loadProgressView.frame = CGRectMake(32, 17, frameWidth-60, 14);
 }
-
+//
 -(void)initPortraint{
     float frameWidth = self.frame.size.width;
     float frameHeight = self.frame.size.height;
@@ -259,6 +259,9 @@
     if (CGRectContainsPoint(self.playerLayer.frame, point)) {
         [self showHud:viewIsShowing];
     }
+}
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesMoved");
 }
 
 -(void)OnPlayBtn:(UIButton *)sender{

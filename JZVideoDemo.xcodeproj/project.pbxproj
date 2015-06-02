@@ -119,14 +119,14 @@
 		E36238311B1D590500570A4C /* JZVideoDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E362385F1B1D5D7D00570A4C /* Resource */,
-				E362385C1B1D5C5A00570A4C /* VedioDetailViewController.h */,
-				E362385D1B1D5C5A00570A4C /* VedioDetailViewController.m */,
 				E36238581B1D593B00570A4C /* video */,
+				E362385F1B1D5D7D00570A4C /* Resource */,
 				E36238361B1D590500570A4C /* AppDelegate.h */,
 				E36238371B1D590500570A4C /* AppDelegate.m */,
 				E36238391B1D590500570A4C /* ViewController.h */,
 				E362383A1B1D590500570A4C /* ViewController.m */,
+				E362385C1B1D5C5A00570A4C /* VedioDetailViewController.h */,
+				E362385D1B1D5C5A00570A4C /* VedioDetailViewController.m */,
 				E362383C1B1D590500570A4C /* Main.storyboard */,
 				E362383F1B1D590500570A4C /* Images.xcassets */,
 				E36238411B1D590500570A4C /* LaunchScreen.xib */,
@@ -512,6 +512,7 @@
 				E36238541B1D590500570A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E36238551B1D590500570A4C /* Build configuration list for PBXNativeTarget "JZVideoDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +521,7 @@
 				E36238571B1D590500570A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
