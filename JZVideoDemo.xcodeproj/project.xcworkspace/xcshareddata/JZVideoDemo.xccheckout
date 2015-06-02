@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C9DBAF19-8E66-4416-A249-62284185548A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JZVideoDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9495D38365EC460FA11FBB1E6B68A7360D02B237</key>
+		<string>https://github.com/lookingstars/JZVideoDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JZVideoDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9495D38365EC460FA11FBB1E6B68A7360D02B237</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lookingstars/JZVideoDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9495D38365EC460FA11FBB1E6B68A7360D02B237</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9495D38365EC460FA11FBB1E6B68A7360D02B237</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JZVideoDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
