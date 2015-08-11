@@ -9,6 +9,8 @@
 #import "VedioDetailViewController.h"
 #import "JZVideoPlayerView.h"
 
+#import "AppDelegate.h"
+
 // 4.屏幕大小尺寸
 #define screen_width [UIScreen mainScreen].bounds.size.width
 #define screen_height [UIScreen mainScreen].bounds.size.height
@@ -36,9 +38,18 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.view.backgroundColor = [UIColor whiteColor];
     dispatch_async(dispatch_get_main_queue(), ^{
-//        [self initPlayer];
+        //        [self initPlayer];
         [self initJZPlayer];
     });
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    appDelegate.isFullScreen = YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    appDelegate.isFullScreen = NO;
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,8 +74,21 @@
 }
 //支持旋转的方向
 //一开始的屏幕旋转方向
+//支持旋转的方向
+//一开始的屏幕旋转方向
+- (NSUInteger)supportedInterfaceOrientations
+{
+    NSLog(@"11222111111");
+    
+    return UIInterfaceOrientationLandscapeLeft;
+}
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationLandscapeLeft;
+}
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    NSLog(@"11111111");
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
     [UIView animateWithDuration:0 animations:^{
         if (UIDeviceOrientationIsLandscape(toInterfaceOrientation)) {
@@ -78,8 +102,10 @@
 }
 
 
+
 -(void)playerViewZoomButtonClicked:(JZVideoPlayerView *)view{
     //强制横屏
+    NSLog(@"222222");
     if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
         SEL selector = NSSelectorFromString(@"setOrientation:");
         
@@ -104,17 +130,16 @@
 #pragma mark - JZPlayerViewDelegate
 -(void)JZOnBackBtn{
     [self.navigationController popViewControllerAnimated:YES];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
